@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Podcast</title>
+</head>
+<body>
+     <h1 align="center">
+                <img src="logo.webp" alt="logo" width="50">yunsify podcast </h1>
+ <nav align="center">
+    <a href="index.html">subscribed podcasts </a>
+    <a href="podcast.html"> podcast details</a>
+    <a href="episode.html">episode details</a>
+     <a href="newpodcast.html" > add a new podcast</a></nav> 
+<h1 align="center">Add a new Podcast</h1>
+ 
+    <form>
+    <!-- title required entry 100 max chars must begin with capital letter-->
+     Title<input type="text" name="pcname" maxlength="100" required>
+    <!-- description maximum 500 cahrs-->
+     description <textarea cols="100" rows=" 5" maxlength="500"></textarea>
+    <!--author name required -->
+    Author <input type="text" name="author" required>
+    <!--owners email required must be email-->
+        Owner´s email <input type="email" name="owner" required>
+    <!--categories assignment of 0 to n categories-->
+        categories <input type ="checkbox" name="cat1" value="cat1">cat1
+                   <input type ="checkbox" name="cat2" value="cat2">cat2
+                   <input type ="checkbox" name="cat3" value="cat3">cat3
+                   <input type ="checkbox" name="cat4" value="cat4">cat4
+                   <input type ="checkbox" name="cat5" value="cat5">cat5
+    <!--last updated required date can only be after the year 2000-->
+     Last Updated <input type="date" name = "lastupdatedate" min="2000-01-01" required>
+    <!--lastupdate in time also required-->
+    last update time <input type="time" name="lastupdatetime" required>
+
+
+    <input type="submit">
+</form>   
+<footer>by @satoruShigami</footer> 
+</body>
+</html>
