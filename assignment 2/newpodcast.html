@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Podcast</title>
+      <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
 <body>
-     <h1 align="center">
-                <img src="logo.webp" alt="logo" width="50">yunsify podcast </h1>
- <nav align="center">
+     <h1 >
+                <img src="../assets/css/img/logo.webp" alt="logo" width="50">yunsify podcast </h1>
+ <nav >
     <a href="index.html">subscribed podcasts </a>
     <a href="podcast.html"> podcast details</a>
     <a href="episode.html">episode details</a>
      <a href="newpodcast.html" > add a new podcast</a></nav> 
-<h1 align="center">Add a new Podcast</h1>
+<h2>Add a new Podcast</h2>
  
     <form>
-    <!-- title required entry 100 max chars must begin with capital letter-->
-     Title<input type="text" name="pcname" maxlength="100" required>
+    <section> <h3>Podcast Information</h3>
+        <!-- title required entry 100 max chars must begin with capital letter-->
+     Title<input class="field" type="text" name="pcname" maxlength="100" required>
     <!-- description maximum 500 cahrs-->
-     description <textarea cols="100" rows=" 5" maxlength="500"></textarea>
+     description <textarea  class="field" cols="100" rows="5" maxlength="500"></textarea>
     <!--author name required -->
-    Author <input type="text" name="author" required>
-    <!--owners email required must be email-->
-        Owner´s email <input type="email" name="owner" required>
     <!--categories assignment of 0 to n categories-->
         categories <input type ="checkbox" name="cat1" value="cat1">cat1
                    <input type ="checkbox" name="cat2" value="cat2">cat2
@@ -31,13 +30,22 @@
                    <input type ="checkbox" name="cat4" value="cat4">cat4
                    <input type ="checkbox" name="cat5" value="cat5">cat5
     <!--last updated required date can only be after the year 2000-->
-     Last Updated <input type="date" name = "lastupdatedate" min="2000-01-01" required>
+     Last Updated <input class="field" type="date" name = "lastupdatedate" min="2000-01-01" required>
     <!--lastupdate in time also required-->
-    last update time <input type="time" name="lastupdatetime" required>
+    last update time <input class="field" type="time" name="lastupdatetime" required></section>
+    <section><h3>Author Information</h3><input class="field" type="text" name="author" required>
+    <!--owners email required must be email-->
+        Owner´s email <input class="field" type="email" name="owner" required></section> 
 
 
     <input type="submit">
-</form>   
+</form> 
+<section><h3>latest episodes</h3>
+    <ul>
+        <li><a href="episode.html">podcast a ep 323</a></li>
+        <li><a href="episode.html">episode b ep 11</a></li>
+        <li><a href="episode.html">episode c ep 7</a></li>
+    </ul></section>  
 <footer>by @satoruShigami</footer> 
 </body>
 </html>
