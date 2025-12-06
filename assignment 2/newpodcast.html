@@ -4,49 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Podcast</title>
-      <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/forms.css">
 </head>
 <body>
-    <section> <h1 >
-                <img src="../assets/img/logo.webp" alt="logo" width="50">yunsify podcast </h1>
- <nav >
-    <a href="index.html">subscribed podcasts </a>
-    <a href="podcast.html"> podcast details</a>
-    <a href="episode.html">episode details</a>
-     <a href="newpodcast.html" > add a new podcast</a></nav> 
-<h2>Add a new Podcast</h2>
- <section id="mistake">
+
+<section class="form section">
+    <h1>
+        <img src="../assets/img/logo.webp" alt="logo" width="50"> yunsify podcast
+    </h1>
+
+    <nav>
+        <a href="index.html">subscribed podcasts</a>
+        <a href="podcast.html">podcast details</a>
+        <a href="episode.html">episode details</a>
+        <a href="newpodcast.html">add a new podcast</a>
+    </nav>
+
+    <h2>Add a new Podcast</h2>
+
+    <fieldset >
+        <legend>Podcast Information</legend>
+    
+
     <form>
-     <h3 class="label">Podcast Information</h3></section>
-        <!-- title required entry 100 max chars must begin with capital letter-->
-     Title<input class="field" type="text" name="pcname" maxlength="100" placeholder="Youness da goat" required>
-    <!-- description maximum 500 cahrs-->
-     description <textarea  class="field" cols="100" rows="5" placeholder="dammm he the goat though" maxlength="500"></textarea>
-    <!--author name required -->
-    <!--categories assignment of 0 to n categories-->
-        categories <input type ="checkbox" name="cat1" value="cat1">cat1
-                   <input type ="checkbox" name="cat2" value="cat2">cat2
-                   <input type ="checkbox" name="cat3" value="cat3">cat3
-                   <input type ="checkbox" name="cat4" value="cat4">cat4
-                   <input type ="checkbox" name="cat5" value="cat5">cat5
-    <!--last updated required date can only be after the year 2000-->
-     Last Updated <input class="field" type="date" name = "lastupdatedate" min="2000-01-01"  required>
-    <!--lastupdate in time also required-->
-    last update time <input class="field" type="time" name="lastupdatetime"   required></section>
-    <section><h3 class="label">Author Information</h3>
-        author´s name<input class="field" type="text" name="author"  placeholder="Youness the man" required>
-    <!--owners email required must be email-->
-        Owner´s email <input class="field" type="email" name="owner" placeholder="dabroskiyouness@gmail.com" required></section> 
 
+        <p class="required">Title</p>
+        <input class="field" type="text" name="pcname" maxlength="100" placeholder="Youness da goat" required>
 
-    <input type="submit">
-</form> 
-<section class="latest-episodes"><h3>latest episodes</h3>
+        <p>Description</p>
+        <textarea class="field" cols="100" rows="5" maxlength="500" placeholder="dammm he the goat though"></textarea>
+
+        Categories:
+        <input type="checkbox" name="cat1">cat1
+        <input type="checkbox" name="cat2">cat2
+        <input type="checkbox" name="cat3">cat3
+        <input type="checkbox" name="cat4">cat4
+        <input type="checkbox" name="cat5">cat5
+
+            </fieldset>
+        <fieldset>
+            <legend>Author Information</legend>
+
+            <p class="required">Author's name</p>
+            <input class="field" type="text" name="author" placeholder="Youness the man" required>
+
+            <p class="required email-label">Owner's email</p>
+            <input class="field" type="email" name="owner" placeholder="dabroskiyouness@gmail.com" required>
+        </fieldset>
+        <fieldset><legend>Last updated</legend>
+             <p class="required">date</p>
+        <input class="field" type="date" name="lastupdatedate" min="2000-01-01" required>
+        <p class="required">time</p>
+        <input class="field" type="time" name="lastupdatetime" required>
+        </fieldset>
+        <div class="submit-wrapper">
+            <input type="submit" value="Submit">
+            <img class="submit-hover-img" src="../assets/img/usure.jpg" alt="submit preview">
+        </div>
+
+    </form>
+</section>
+
+<section class="latest-episodes">
+    <h3>Latest episodes</h3>
     <ul>
         <li><a href="episode.html">podcast a ep 323</a></li>
         <li><a href="episode.html">episode b ep 11</a></li>
         <li><a href="episode.html">episode c ep 7</a></li>
-    </ul></section>  
-<footer>by @satoruShigami</footer> 
+    </ul>
+</section>
+
+<footer>by @satoruShigami</footer>
+
 </body>
 </html>

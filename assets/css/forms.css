@@ -1,0 +1,83 @@
+.required::before {
+    content: "*";
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* input validation borders */
+input:valid {
+    border-bottom: 2px solid green;
+}
+
+input:invalid {
+    border-bottom: 2px solid red;
+}
+
+/* input hover + focus */
+input:hover,
+input:focus {
+    background-color: rgb(197, 197, 20);
+}
+
+input {
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: lightsalmon;
+}
+
+/* prevent horizontal scroll caused by absolutely positioned preview */
+body {
+    overflow-x: hidden;
+}
+
+/* submit wrapper for image hover */
+.submit-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.submit-wrapper input[type="submit"] {
+    width: 150px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* image that appears to the right of the submit button on hover */
+.submit-hover-img {
+    display: none;
+    position: absolute;
+    /* push far to the right of the button */
+    left: calc(100% + 1500px);
+    top: 50%;
+    transform: translateY(-50%);
+    /* fixed height, width scales to keep aspect ratio */
+    height: 300px;
+    width: auto;
+    max-width: 45vw;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.submit-wrapper:hover .submit-hover-img,
+.submit-wrapper:focus-within .submit-hover-img {
+    display: block;
+}
+
+/* Insert envelope icon before email input labels */
+label[for*="email"]::before,
+p.email-label::after {
+    content: "✉ ";
+    color: #333;
+    margin-right: 4px;
+    font-size: 1.1em;
+}

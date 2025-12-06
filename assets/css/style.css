@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     margin: 0;
+    background-color: #69034c;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -26,7 +28,7 @@ nav {text-align: center;
     a {margin: 20px;
        text-decoration: none;
        font-weight: bold;
-       color: rgb(63, 135, 190);}
+       color: rgb(255, 255, 255);}
 img.broco {width: 300px;
         height: 300px;
         border-radius: 20px;}
@@ -47,13 +49,21 @@ section {
     background-color: lightgray;
     position: relative;
 }
-
-.label {
-    position: absolute;
-    top: -14px;               /* sits over the border */
-    left: 50%;                /* move to center */
-    padding: 0 12px;
+fieldset {
+    margin: 20px;
+    padding: 30px 20px 20px;   /* add extra top padding */
+    border-top: 2px solid #000 ;
+    position: relative;
+}
+legend {
+   padding: 0 10px;
     font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 20%;
+    border-right: 2px solid #000;
+    border-left: 2px solid #000;
+
 }
 .latest-episodes {
 
@@ -76,7 +86,33 @@ td,th {
     border: 1px solid black;
     padding: 8px 12px;
 }
-#mistake {
-    border: none !important;
-    background-color: transparent;
+.scroll {
+    max-height: 100px;
+    overflow-y: scroll;
 }
+nav a{
+    border: none;
+    padding: 10px;
+    background-color: rgb(189, 83, 1);
+    border-radius: 20px;
+}
+
+/* Style the episodes table specifically */
+table.episodes-table thead tr {
+    background-color: #4CAF50;
+}
+
+table.episodes-table thead th {
+    color: white;
+    font-weight: bold;
+}
+
+/* Highlight odd rows in the table body */
+table.episodes-table tbody tr:nth-child(odd) {
+    background-color: #fa1500;
+}
+
+table.episodes-table a{
+    color :black;
+}
+    
