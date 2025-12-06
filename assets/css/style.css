@@ -24,11 +24,11 @@ nav {text-align: center;
     margin: 10px;
     padding: 10px;
     border: 2px solid rgb(0, 0, 0);
-    background-color: aquamarine;}
+    background-color: aqua;}
     a {margin: 20px;
        text-decoration: none;
        font-weight: bold;
-       color: rgb(255, 255, 255);}
+       color: rgb(87, 143, 248);}
 img.broco {width: 300px;
         height: 300px;
         border-radius: 20px;}
@@ -93,8 +93,9 @@ td,th {
 nav a{
     border: none;
     padding: 10px;
-    background-color: rgb(189, 83, 1);
+    background-color: rgb(203, 133, 3); 
     border-radius: 20px;
+    color: white;
 }
 
 /* Style the episodes table specifically */
