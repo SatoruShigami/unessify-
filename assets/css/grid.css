@@ -1,0 +1,46 @@
+form {
+    display: grid;
+
+    grid-template-columns: 50% 50%; /* VALID HERE */
+
+    grid-template-areas: 
+        "h2 h2"
+        "info author"
+        "update update"
+        "submit .";
+    
+}
+
+h2 {
+    grid-area: h2;
+}
+#info {
+    grid-area: info;
+}
+#author {
+    grid-area: author;
+}
+#update {
+    grid-area: update;
+}
+
+.submit-wrapper {
+    grid-area: submit;
+    justify-self: center;
+    margin-top: 20px;
+}
+#container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+   grid-template-areas: "info img"
+                        "list list";
+}
+.episode-table {
+    grid-area: list;
+}
+.broco{
+    grid-area: img;
+    justify-self: center;
+    align-self: center;}
+    .info {
+    grid-area: info;}

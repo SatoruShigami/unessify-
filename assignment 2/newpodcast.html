@@ -6,64 +6,67 @@
     <title>New Podcast</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css">
 </head>
 <body>
 
 <section class="form section">
-    <h1>
-        <img src="../assets/img/logo.webp" alt="logo" width="50"> yunsify podcast
-    </h1>
+        <h1>
+            <img src="../assets/img/logo.webp" alt="logo" width="50"> yunsify podcast
+        </h1>
 
-    <nav>
-        <a href="index.html">subscribed podcasts</a>
-        <a href="podcast.html">podcast details</a>
-        <a href="episode.html">episode details</a>
-        <a href="newpodcast.html">add a new podcast</a>
-    </nav>
+        <nav>
+            <a href="index.html">subscribed podcasts</a>
+            <a href="podcast.html">podcast details</a>
+            <a href="episode.html">episode details</a>
+            <a href="newpodcast.html">add a new podcast</a>
+        </nav>
 
-    <h2>Add a new Podcast</h2>
+        <h2>Add a new Podcast</h2>
 
-    <fieldset >
-        <legend>Podcast Information</legend>
-    
+        
+        
 
-    <form>
+        <form>
+            <fieldset id="info">
+                <legend>Podcast Information</legend>
 
-        <p class="required">Title</p>
-        <input class="field" type="text" name="pcname" maxlength="100" placeholder="Youness da goat" required>
+                <p class="required">Title</p>
+                <input class="field" type="text" name="pcname" maxlength="100" placeholder="Youness da goat" required>
 
-        <p>Description</p>
-        <textarea class="field" cols="100" rows="5" maxlength="500" placeholder="dammm he the goat though"></textarea>
+                <p>Description</p>
+                <textarea class="field" cols="100" rows="5" maxlength="500" placeholder="dammm he the goat though"></textarea>
 
-        Categories:
-        <input type="checkbox" name="cat1">cat1
-        <input type="checkbox" name="cat2">cat2
-        <input type="checkbox" name="cat3">cat3
-        <input type="checkbox" name="cat4">cat4
-        <input type="checkbox" name="cat5">cat5
+                Categories:
+                <input type="checkbox" name="cat1">cat1
+                <input type="checkbox" name="cat2">cat2
+                <input type="checkbox" name="cat3">cat3
+                <input type="checkbox" name="cat4">cat4
+                <input type="checkbox" name="cat5">cat5
 
             </fieldset>
-        <fieldset>
-            <legend>Author Information</legend>
+                <fieldset id="author">
+                    <legend>Author Information</legend>
 
-            <p class="required">Author's name</p>
-            <input class="field" type="text" name="author" placeholder="Youness the man" required>
+                    <p class="required">Author's name</p>
+                    <input class="field" type="text" name="author" placeholder="Youness the man" required>
 
-            <p class="required email-label">Owner's email</p>
-            <input class="field" type="email" name="owner" placeholder="dabroskiyouness@gmail.com" required>
-        </fieldset>
-        <fieldset><legend>Last updated</legend>
-             <p class="required">date</p>
-        <input class="field" type="date" name="lastupdatedate" min="2000-01-01" required>
-        <p class="required">time</p>
-        <input class="field" type="time" name="lastupdatetime" required>
-        </fieldset>
-        <div class="submit-wrapper">
-            <input type="submit" value="Submit">
-            <img class="submit-hover-img" src="../assets/img/usure.jpg" alt="submit preview">
-        </div>
+                    <p class="required email-label">Owner's email</p>
+                    <input class="field" type="email" name="owner" placeholder="dabroskiyouness@gmail.com" required>
+                </fieldset>
 
-    </form>
+                <fieldset id="update"><legend>Last updated</legend>
+                    <p class="required">date</p>
+                    <input class="field" type="date" name="lastupdatedate" min="2000-01-01" required>
+                    <p class="required">time</p>
+                    <input class="field" type="time" name="lastupdatetime" required>
+                </fieldset>
+                <div class="submit-wrapper">
+                    <input type="submit" value="Submit">
+                    <img class="submit-hover-img" src="../assets/img/usure.jpg" alt="submit preview">
+                </div>
+    
+        </form>
 </section>
 
 <section class="latest-episodes">

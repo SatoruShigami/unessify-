@@ -55,13 +55,12 @@ body {
     display: none;
     position: absolute;
     /* push far to the right of the button */
-    left: calc(100% + 1500px);
+    left: calc(100% + 1200px);
     top: 50%;
     transform: translateY(-50%);
     /* fixed height, width scales to keep aspect ratio */
     height: 300px;
     width: auto;
-    max-width: 45vw;
     border: 1px solid #ccc;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
