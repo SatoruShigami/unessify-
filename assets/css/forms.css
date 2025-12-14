@@ -56,10 +56,10 @@ body {
     position: absolute;
     /* push far to the right of the button */
     left: calc(100% + 1200px);
-    top: 50%;
+    top: 0;
     transform: translateY(-50%);
     /* fixed height, width scales to keep aspect ratio */
-    height: 300px;
+    height: 150px;
     width: auto;
     border: 1px solid #ccc;
     background: #fff;

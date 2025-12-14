@@ -34,7 +34,8 @@ nav {text-align: center;
        color: rgb(87, 143, 248);}
 img.broco {width: 300px;
         height: 300px;
-        border-radius: 20px;}
+        border-radius: 20px;
+    }
         footer {text-align: right;
             margin: 20px;}
            
@@ -73,7 +74,6 @@ legend {
 audio {
     display: block;
     margin: 20px auto;
-    align-self:middle;
 }
 table {
     margin: 0 auto;
