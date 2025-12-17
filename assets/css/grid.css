@@ -1,7 +1,3 @@
-/* ================================
-   GLOBAL PAGE GRID (ALL PAGES)
-================================ */
-
 body {
   display: grid;
   grid-template-areas:
@@ -14,7 +10,7 @@ body {
   margin: 0;
 }
 
-/* Map existing HTML elements */
+
 h1 {
   grid-area: header;
 }
@@ -31,9 +27,7 @@ footer {
   grid-area: footer;
 }
 
-/* ================================
-   CONTENT LAYOUT (DESKTOP)
-================================ */
+
 
 #container {
   display: grid;
@@ -42,9 +36,7 @@ footer {
   align-items: start;
 }
 
-/* ================================
-   TABLET + MOBILE
-================================ */
+
 
 @media (max-width: 768px) {
   #container {
