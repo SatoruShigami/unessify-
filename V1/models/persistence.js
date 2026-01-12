@@ -65,30 +65,30 @@ function subscribe(url, callback) {
  */ // [TODO]
   // Implement function
 function convert(url, feed) {
-  const firstEpisode = feed.episodes?.[0];
+  const meta = feed.meta || {};
 
   const p = new podcast(
-    firstEpisode?.title || "Unknown Podcast",
-    firstEpisode?.summary || firstEpisode?.description,
-    null,
-    null,
-    null,
-    firstEpisode?.imageURL,
+    meta.title || "Unknown Podcast",
+    meta.description || meta.summary || "",
+    meta.author || null,
+    meta.owner?.name || null,
+    meta.owner?.email || null,
+    meta.imageURL || null,
     url,
-    []
+    meta.categories || []
   );
 
   feed.episodes.forEach(e => {
     const audio = new episodeaudio(
-      e.enclosure?.url,
-      e.enclosure?.length,
-      e.enclosure?.type
+      e.enclosure?.url || null,
+      e.enclosure?.length || null,
+      e.enclosure?.type || null
     );
 
     const ep = new Episode(
       e.title,
-      e.description,
-      e.duration * 1000 // seconds → ms if needed
+      e.description || e.summary || "",
+      e.duration ? e.duration * 1000 : 0
     );
 
     ep.date = new Date(e.pubDate);
@@ -100,6 +100,7 @@ function convert(url, feed) {
   p.sortEpisodesByDate();
   return p;
 }
+
 
 
 // [TODO]

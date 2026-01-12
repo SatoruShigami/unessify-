@@ -1,0 +1,52 @@
+/* Tile view for subscribed podcasts */
+.podcast-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.podcast-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: lightgray;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #6d9ee8;
+    transition: background-color 0.3s;
+}
+
+.podcast-tile:hover {
+    background-color: #ddd;
+}
+
+.podcast-tile img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.podcast-tile h3 {
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#search {
+    padding: 10px;
+    padding-right: 10px;
+    gap: 10px;
+    margin-bottom: 20px;
+    border : 2px solid #000;
+   display: inline-block;
+}
+.podcast-list{
+    border: none;
+}
