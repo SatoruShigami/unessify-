@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Episode</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/flex.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/flex.css">
   </head>
   <body>
-  <footer>by @satoruShigami</footer>
+  <%- include ("includes/Header.ejs") %>
+  <section id="episode-info">
+  <figure>
+    <img src="<%= episode.audio?.imageURL || episode.imageurl || podcast.imageurl %>" 
+         alt="<%= episode.title %> image">
+  </figure>
+
+  <h2><%= episode.title %></h2>
+  <p><%= episode.desc %></p>
+  <p>Published on: <%= episode.date.toLocaleDateString() %></p>
+
+  <audio controls>
+    <source src="<%= episode.audio?.url %>" type="<%= episode.audio?.type %>">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div>
+    <a href="/podcast?pc=<%= pc %>">← Back to Podcast</a>
+  </div>
+</section>
+    
+  </main>
+  <%- include ("includes/Aside.ejs") %>
+  <%- include ("includes/Footer.ejs") %>
 </body>
+
 </html> 

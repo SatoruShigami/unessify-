@@ -12,15 +12,22 @@ const router = express.Router();
 router.get("/", function (req, res) {
   // [TODO]
   // Implement: Display list of subscribed podcasts
-  res.sendFile(path.join(__dirname, "../../V0/assignment/index.html"));
+  res.render("index", { podcasts });
 });
 router.get("/podcast", function (req, res) {
   // [TODO]
   // Implement: Show detail page for the podcast with the given
   // index (index is provided as a request/query parameter,
   // access with: req.query.pc)
-  const podcast = db.podcasts[req.query.pc];
-  res.sendFile(path.join(__dirname, "../../V0/assignment/podcast.html"));
+  const pc = Number(req.query.pc);
+  const podcast = db.podcasts[pc];
+  if (!podcast) {
+    return res.status(404).render("error");
+  }
+  res.render("podcast", {
+    podcast,
+    pc
+  });
 });
 
 router.get("/episode", function (req, res) {
@@ -28,9 +35,14 @@ router.get("/episode", function (req, res) {
   // Implement: Show detail page for the episode (indices
   // are provided as request/query parameters, access with:
   // req.query.pc and req.query.ep)
-  res.sendFile(path.join(__dirname, "../../V0/assignment/episode.html"));
-  const podcast = db.podcasts[req.query.pc];
-  const episode = podcast.episodes[req.query.ep];
+ const pc = Number(req.query.pc);
+  const ep = Number(req.query.ep);
+  const podcast = db.podcasts[pc];
+  const episode = podcast?.episodes[ep];
+  if (!episode) return res.status(404).render("error");
+
+  res.render("episode", { podcast, episode, pc, ep });
+
 });
 
 router.post("/subscribe", function (req, res) {

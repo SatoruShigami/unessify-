@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Episode</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
   </head>
   <body>
-    
+  <%- include ("includes/Header.ejs") %>
+  <section>
+      <h2>
+        Information about this podcast
+      </h2>
+       <img src="<%= podcast.imageurl %>" alt="Podcast image">
+        <p class="scroll"><%= podcast.desc %></p>
+        <p>Categories: <%= podcast.categories.join(", ") %></p>
+        <p>Author: <%= podcast.author %></p>
+        <p>Owner: <%= podcast.ownername %></p>
+        <p>Last updated: <%= podcast.lastupdate.toDateString() %></p>
+        <table class="episodes-table">
+          <thead>
+            <tr>
+              <th>episode</th>
+              <th>title</th>
+              <th>date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% podcast.episodes.forEach(function(episode, index) { %>
+            <tr>
+              <td><a href="/episode?pc=<%= pc %>&ep=<%= index %>"><%= index + 1 %></td>
+              <td><%= episode.title %></td>
+              <td><%= episode.date %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+        </section>
+  <%- include ("includes/Aside.ejs") %>
+  <%- include ("includes/Footer.ejs") %>
   </body>
 </html>

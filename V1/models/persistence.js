@@ -101,11 +101,25 @@ function convert(url, feed) {
   return p;
 }
 
+function getAsideEpisodes() {
+  const totalEpisodes = [];
+
+  podcasts.forEach(podcast => { 
+  totalEpisodes.push(podcast.episodes[0]);
+  });
+
+  // sort latest episodes across podcasts
+  totalEpisodes.sort((a, b) => b.date - a.date);
+
+  // only keep the first 3
+  return totalEpisodes.slice(0, 3);
+}
 
 
 // [TODO]
 // Define the module interface: make the podcasts array and subscribe function accessible from outside
 module.exports = {
   podcasts,
-  subscribe
+  subscribe,
+  getAsideEpisodes
 };

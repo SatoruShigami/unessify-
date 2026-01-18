@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/flex.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/flex.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
   </head>
   <body>
+    <%- include ("includes/Header.ejs") %>
+   
+     <section>
+            <h2>subscribed podcasts</h2>
+        <div id="search">
+          <form>
+            Search
+            <input type="text" name="pcname" maxlength="100" required>
+            <input type="submit" value="Search">
+          </form>
+        </div>
+          <button id="viewToggle">List view</button>
 
-    <script src="../assets/js/script.js"></script>
-    <script src="../assets/js/index.js"></script>
+    <div class="podcast-list" id="podcastList">
+      <% podcasts.forEach((podcast, index) => { %>
+        <a href="/podcast?pc=<%= index %>" class="podcast-tile">
+          <img src="<%= podcast.imageurl %>" alt="">
+          <h3><%= podcast.title %></h3>
+        </a>
+      <% }) %>
+    </div>
+    <form action="/subscribe" method="POST">
+  <input type="url" name="url" placeholder="Podcast RSS feed URL" required>
+  <button type="submit">Subscribe</button>
+</form>
+
+    </section>
+    <%- include ("includes/Aside.ejs") %>
+    <%- include ("includes/Footer.ejs") %>
+    <script src="/js/script.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
